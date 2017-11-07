@@ -72,17 +72,26 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    margin: 0 15px;
+    margin: 15px 15px;
 }
 
-header .first-row li{
-    display: inline-block;
+header .first-row li{    
+    display: inline-block; 
+    padding: 10px;       
 }
+
+/* .first-row:nth-child(1) {
+    align-self: flex-start;
+} */
 
 .first-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between;    
+}
+
+.first-row .contacts span {
+    padding: 10px;
 }
 
 .second-row {
@@ -90,6 +99,11 @@ header .first-row li{
 }
 
 .third-row ul{
-justify-content: space-around
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
 }
 
