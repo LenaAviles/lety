@@ -9,6 +9,16 @@
 }
 
 @font-face {
+    font-family: 'TrajanProRegular';
+    src: url('../fonts/TrajanProRegular/TrajanProRegular.eot');
+    src: url('../fonts/TrajanProRegular/TrajanProRegular.eot') format('embedded-opentype'),
+         url('../fonts/TrajanProRegular/TrajanProRegular.woff2') format('woff2'),
+         url('../fonts/TrajanProRegular/TrajanProRegular.woff') format('woff'),
+         url('../fonts/TrajanProRegular/TrajanProRegular.ttf') format('truetype'),
+         url('../fonts/TrajanProRegular/TrajanProRegular.svg#TrajanProRegular') format('svg');
+}
+
+@font-face {
     font-family: 'proximanovabold';
     src: url('../fonts/proximanova-bold/proximanovabold.eot');
     src: url('../fonts/proximanova-bold/proximanovabold.eot') format('embedded-opentype'),
@@ -87,14 +97,6 @@ header {
     text-transform: uppercase;
 }
 
-header .first-row li{    
-    display: inline-block; 
-    padding: 0 10px;       
-}
-
-/* .first-row:nth-child(1) {
-    align-self: flex-start;
-} */
 
 .first-row {
     display: flex;
@@ -102,6 +104,15 @@ header .first-row li{
     justify-content: space-between; 
     font-family: "proximanovasemibold", sans-serif;   
 }
+
+header .first-row li {    
+    display: inline-block; 
+    padding: 0 10px;    
+}
+
+/* .first-row:nth-child(1) {
+    align-self: center;
+} */
 
 .first-row a {
     font-size: 10px;
@@ -125,7 +136,12 @@ header .first-row li{
     line-height: 95px;
     text-align: center;
     font-family: "Brandon_bld", sans-serif;
-    font-size: 24px;
+    font-size: 24px;     
+}
+
+.third-row {
+    height: 56px;
+    line-height: 76px;       
 }
 
 .third-row ul{
@@ -134,7 +150,7 @@ header .first-row li{
 }
 
 .third-row a {
-    font-family: "proximanovabold", sans-serif;
+    font-family: "proximanovabold", sans-serif;    
     font-size: 13px;
     color: black;
     font-weight: 700;
@@ -144,20 +160,151 @@ a {
     text-decoration: none;    
 }
 
-hr {
+header hr {
     border: none;
     background-color: #f2f2f2;
     color: #f2f2f2;
     height: 1px;
+    position: absolute;
+    top:auto;
+    left:0;
+    width:100%;
 }
 
-.circles-parent { text-align:center; }
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.main-slider {
+    height: 517px;
+    background-image: url("../img/slider-0.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;   
+}
+
+.main-slider-product {
+    margin: 5%;
+}
+
+.main-slider-product-name {
+    font-family: "TrajanProRegular", sans-serif;
+    font-size: 72px;
+    text-transform: uppercase;
+}
+
+.main-slider-product-desc {
+    font-family: "proximanovasemibold", sans-serif;
+    font-size: 18px;
+}
+
+.main-slider hr {
+    border: none;
+    background-color: black;
+    color: black;
+    height: 2px;
+    width: 44px;
+    margin-left: 0;
+    text-align: left;
+}
+
+.main-slider-product-img {
+    text-align: right;
+}
+
+.main-slider-nav {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;    
+    margin: 3%;
+    color: #c59a77;
+}
+
+.circles-parent { margin: 50%;}
 .circle {      
 	border-radius: 50%;
-	width: 7px;
-    height: 7px;
-    margin: 1% 1%; 
-    border: 2px solid #BADA55;
+	width: 5px;
+    height: 5px;
+    margin: 100% 0%;     
+    border: 2px solid white;
 }
-.circles-parent .circle:last-child { background:#BADA55; }
+.circles-parent .circle:last-child { background:white; }
+
+.main-slider-nav-arrow {
+    margin: 50%;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: white;
+}
+
+.main-slider-nav-about {
+    margin: 50%;
+    font-family: "proximanovabold", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 110px;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    background: white;
+}
+
+.main-banner {
+    height: 193px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;      
+    /* justify-content: flex-end; */
+    align-items: stretch;     
+}
+
+.main-banner p:first-child {
+    margin: 5%;
+    font-family: "proximanovabold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.main-banner-first { 
+    align-self: stretch;     
+    flex-grow: 1;        
+    background-image: url("../img/banner-0.png");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #b99978;
+}
+
+.main-banner-second {     
+    flex-grow: 1; 
+    align-self: stretch;      
+    background-image: url("../img/banner-1.png");    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-banner-third {   
+    flex-grow: 1; 
+    align-self: stretch;     
+    background-image: url("../img/banner-2.png");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.main-banner-third-img {
+    margin-top: -70px;
+    text-align: right;
+}
 
