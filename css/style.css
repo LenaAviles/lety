@@ -101,11 +101,11 @@ header {
 .first-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
+    justify-content: space-between;     
     font-family: "proximanovasemibold", sans-serif;   
 }
 
-header .first-row li {    
+header .first-row li {        
     display: inline-block; 
     padding: 0 10px;    
 }
@@ -131,6 +131,25 @@ header .first-row li {
     color: #a9a9a9;
 }
 
+/* .first-row .first-row-nav {    
+    position: absolute;
+    left: 50%;
+} */
+
+/* .first-row .contacts {    
+    flex-basis: 25%;
+}
+
+.first-row .first-row-nav { 
+    align-self: center;       
+    flex-basis: 50%;
+}
+
+.first-row .login-block {    
+    flex-basis: 25%;  
+} */
+
+
 .second-row {
     height: 95px;
     line-height: 95px;
@@ -153,7 +172,7 @@ header .first-row li {
     font-family: "proximanovabold", sans-serif;    
     font-size: 13px;
     color: black;
-    font-weight: 700;
+    font-weight: 700;    
 }
 
 a {
@@ -193,6 +212,7 @@ main {
 }
 
 .main-slider-product-name {
+    margin: 0 -2%;
     font-family: "TrajanProRegular", sans-serif;
     font-size: 72px;
     text-transform: uppercase;
@@ -271,14 +291,15 @@ main {
 }
 
 .main-banner p:first-child {
-    margin: 5%;
+    margin: 5%;    
     font-family: "proximanovabold", sans-serif;
     font-size: 16px;
     font-weight: 700;
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 
-.main-banner-first { 
-    align-self: stretch;     
+.main-banner-first {     
     flex-grow: 1;        
     background-image: url("../img/banner-0.png");    
     background-repeat: no-repeat;
@@ -287,24 +308,22 @@ main {
 }
 
 .main-banner-second {     
-    flex-grow: 1; 
-    align-self: stretch;      
+    flex-grow: 1;     
     background-image: url("../img/banner-1.png");    
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .main-banner-third {   
-    flex-grow: 1; 
-    align-self: stretch;     
+    flex-grow: 1;     
     background-image: url("../img/banner-2.png");    
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff;
+    color: #fff;    
 }
 
 .main-banner-third-img {
-    margin-top: -70px;
+    margin-top: -70px;    
     text-align: right;
 }
 
