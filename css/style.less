@@ -1,0 +1,78 @@
+@grey: #a9a9a9;
+@light-grey: #f2f2f2;
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 1% 3%;    
+	text-transform: uppercase;
+	a {
+		text-decoration: none;    
+	}
+	hr {
+		border: none;
+		background-color: @light-grey;
+		color: @light-grey;
+		height: 1px;
+		position: absolute;
+		top:auto;
+		left:0;
+		width:100%;
+	}
+	.first-row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;     
+		font-family: "proximanovasemibold", sans-serif;   
+		a {
+			font-size: 10px;
+			color: @grey;    
+		}
+		.contacts {
+			flex-basis: 25%;
+			a {
+				font-size: 14px;
+				color: black;
+			}
+			span {
+				padding: 10px;
+				text-transform: none;
+				font-size: 12px;
+				color: @grey;
+			}
+		}
+		&-nav {
+			flex-basis: 50%;
+			li {        
+				display: inline-block; 
+				padding: 0 10px;    
+			}
+		}
+		.login-block {    
+			flex-basis: 25%;  
+		}
+	}
+	.second-row {
+		height: 95px;
+		line-height: 95px;
+		text-align: center;
+		font-family: "Brandon_bld", sans-serif;
+		font-size: 24px;     
+	}
+	.third-row {
+		height: 56px;
+		line-height: 76px; 
+		ul{
+			display: flex;
+			justify-content: space-between;
+		}
+		a {
+			font-family: "proximanovabold", sans-serif;    
+			font-size: 13px;
+			color: black;
+			font-weight: 700;    
+		}      
+	}
+}
