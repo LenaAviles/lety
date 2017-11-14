@@ -14,6 +14,12 @@
 .trajan-reg {
   font-family: "TrajanProRegular", sans-serif;
 }
+.main-slider-text {
+  font-family: "proximanovabold", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
 /* Basic Colors */
 /* Main Header */
 header {
@@ -91,6 +97,7 @@ header .third-row {
 header .third-row ul {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 header .third-row a {
   font-family: "proximanovabold", sans-serif;
@@ -109,10 +116,17 @@ main {
   /* Main Slider */
   /* Main Banner */
 }
+main .round-arrow-btn {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
 main .main-slider {
-  height: 517px;
+  height: 520px;
   background-image: url("../img/slider-0.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
@@ -120,8 +134,8 @@ main .main-slider {
 }
 main .main-slider hr {
   border: none;
-  background-color: black;
-  color: black;
+  background-color: #000000;
+  color: #000000;
   height: 2px;
   width: 44px;
   margin-left: 0;
@@ -137,9 +151,11 @@ main .main-slider-product-name {
   text-transform: uppercase;
 }
 main .main-slider-product-desc {
-  font-family: "proximanovasemibold", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+  font-family: "proximanovabold", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #1a1a1a;
 }
 main .main-slider-product-img {
   text-align: right;
@@ -166,12 +182,12 @@ main .main-slider-nav .circle:last-child {
   background: #ffffff;
 }
 main .main-slider-nav-arrow {
-  margin: 50%;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  margin: 50%;
   background: #ffffff;
 }
 main .main-slider-nav-about {
@@ -188,40 +204,71 @@ main .main-slider-nav-about {
   background: #ffffff;
 }
 main .main-banner {
-  min-height: 193px;
   max-width: 100%;
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  box-sizing: border-box;
+  flex-wrap: wrap;
 }
-main .main-banner p:first-child {
-  margin: 5%;
+main .main-banner p {
+  margin: 7%;
   font-family: "proximanovabold", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 24px;
+}
+main .main-banner-item {
+  min-width: 425px;
+  min-height: 195px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main .main-banner-first {
   flex-basis: 33.33%;
   background-image: url("../img/banner-0.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #c59a77;
+}
+main .main-banner-first-arrow {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 15% 7% 7% 7%;
+  background: #1a1a1a;
+  color: #000000;
+  border: 0.7px dotted #c59a77;
 }
 main .main-banner-second {
   flex-basis: 33.33%;
   background-image: url("../img/banner-1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+main .main-banner-second-arrow {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 15% 7% 7% 7%;
+  background: #000000;
+  color: #eeeeee;
 }
 main .main-banner-third {
   flex-basis: 33.33%;
   background-image: url("../img/banner-2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #ffffff;
 }
+main .main-banner-third-arrow {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 15% 7% 7% 7%;
+  background: #ffffff;
+  color: #c59a77;
+}
 main .main-banner-third-img {
-  margin-top: -70px;
-  text-align: right;
+  margin-top: -180px;
+  float: right;
 }
