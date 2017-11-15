@@ -74,6 +74,7 @@ header .first-row .contacts span {
 }
 header .first-row-nav {
   flex-basis: 50%;
+  text-align: center;
 }
 header .first-row-nav li {
   display: inline-block;
@@ -81,6 +82,12 @@ header .first-row-nav li {
 }
 header .first-row .login-block {
   flex-basis: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .first-row .login-block img {
+  margin: -10px 5px 0 15px;
 }
 header .second-row {
   height: 95px;
@@ -115,6 +122,7 @@ main {
   margin: auto;
   /* Main Slider */
   /* Main Banner */
+  /* Section Products */
 }
 main .round-arrow-btn {
   text-align: center;
@@ -271,4 +279,152 @@ main .main-banner-third-arrow {
 main .main-banner-third-img {
   margin-top: -180px;
   float: right;
+}
+main .products {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+  border-right: 0.5px solid #eeeeee;
+  background-color: #ffffff;
+}
+main .products h2 {
+  margin: 5% 0 0 5%;
+  font-family: "proximanovabold", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: black;
+  text-transform: uppercase;
+  max-width: 142px;
+}
+main .products p {
+  max-width: 142px;
+  margin: 3% 0 0 5%;
+  font-family: "proximanovabold", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #838383;
+}
+main .products .product {
+  min-width: 425px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-position: 75% 50%;
+  border-top: 0.5px solid #eeeeee;
+  border-left: 0.5px solid #eeeeee;
+}
+main .products .product-price {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 7%;
+  margin-bottom: 5%;
+}
+main .products .product-price h2 {
+  color: #838383;
+  font-family: "proximanovasemibold", sans-serif;
+  font-weight: 400;
+}
+main .products .product-cart {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  color: #c59a77;
+  box-shadow: 0px 2px 2px 0px #a9a9a9;
+}
+main .products .product-1 {
+  flex-basis: 33%;
+  background-image: url("../img/product-0.png");
+}
+main .products .product-2 {
+  flex-basis: 33%;
+  background-image: url("../img/product-1.png");
+}
+main .products .product-3 {
+  flex-basis: 33%;
+  background-image: url("../img/product-2.png");
+}
+main .products .product-4 {
+  flex-basis: 33%;
+  background-image: url("../img/product-3.png");
+}
+main .products .product-5 {
+  flex-basis: 33%;
+  background-image: url("../img/product-4.png");
+  background-color: #f4f0eb;
+  background-position: 100% 50%;
+}
+main .products .product-5 .product-cart {
+  background: #b99978;
+}
+main .products .product-6 {
+  flex-basis: 33%;
+  background-image: url("../img/product-5.png");
+}
+main .products .product-7 {
+  flex-basis: 33%;
+  background-image: url("../img/product-6.png");
+}
+main .products .product-8 {
+  flex-basis: 33%;
+  background-image: url("../img/product-7.png");
+}
+main .products .product-9 {
+  flex-basis: 33%;
+  background-image: url("../img/product-8.png");
+}
+main .products .product-10 {
+  flex-basis: 33%;
+  background-image: url("../img/product-9.png");
+}
+main .products .product .about {
+  min-width: 850px;
+  height: 300px;
+  flex-basis: 66%;
+  background-repeat: no-repeat;
+  background-image: url("../img/about.png");
+  border-top: 0.5px solid #eeeeee;
+  border-left: 0.5px solid #eeeeee;
+  background-size: cover;
+  background-position: top left;
+}
+main .products .product .about h2,
+main .products .product .about p {
+  max-width: 336px;
+}
+footer {
+  height: 300px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  width: 100%;
+  max-width: 1280px;
+  min-width: 430px;
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2%;
+}
+footer h3 {
+  font-family: "proximanovabold", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+footer p {
+  font-family: "proximanovasemibold", sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 12px;
+  color: #a9a9a9;
 }

@@ -26,6 +26,9 @@
 @light-black: lighten(@black, 10%);
 @orange: #c59a77;
 @white: #fff;
+@beige: #f4f0eb;
+@dark-beige: #b99978;
+@background: #ffffff;
 /* Main Header */
 header {
 	width: 100%;
@@ -53,7 +56,7 @@ header {
 		left:0;
 		width:100%;
 	}
-	.first-row {
+	.first-row {		
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;     
@@ -77,19 +80,27 @@ header {
 		}
 		&-nav {
 			flex-basis: 50%;
+			text-align: center;
 			li {        
 				display: inline-block; 
 				padding: 0 10px;    
 			}
 		}
-		.login-block {    
-			flex-basis: 25%;			 
-		}
+		.login-block {								  
+			flex-basis: 25%;
+			display: flex;			
+			justify-content: flex-end;
+			align-items: center;
+			img {
+				margin: -10px 5px 0 15px;
+			}					
+	}
+				 
 	}
 	.second-row {
 		height: 95px;
 		line-height: 95px;
-		text-align: center;
+		text-align: center;		
 		.brandon-bld;
 		font-size: 24px;     
 	}
@@ -105,7 +116,7 @@ header {
 			.proxima-bld;
 			font-size: 13px;			
 			color: @black;			    
-		}      
+		}		    
 	}
 }
 /* Main */
@@ -247,4 +258,145 @@ main {
 		}   
 	} 
 }
+/* Section Products */
+.products {    
+	max-width: 100%;	
+    display: flex;
+    flex-direction: row;
+	align-items: stretch;  
+	flex-wrap: wrap;
+	border-right: 0.5px solid @light-grey;
+	background-color: @background;
+	h2 {
+		margin: 5% 0 0 5%;
+		.proxima-bld;
+		font-size: 18px;
+		line-height: 24px;
+		color: black;
+		text-transform: uppercase;
+		max-width: 142px;
+	}	
+	p {
+		max-width: 142px;
+		margin: 3% 0 0 5%;
+		.proxima-bld;
+		font-size: 12px;
+		line-height: 16px;
+		color: darken(@grey, 15%);		
+	} 
+	.product {			
+		min-width: 425px;
+		height: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-repeat: no-repeat;
+		background-position: 75% 50%;		
+		border-top: 0.5px solid @light-grey;
+		border-left: 0.5px solid @light-grey;			
+		&-price {			
+			display: flex;
+			justify-content: space-between;
+			margin-right: 7%;			
+			h2 { 
+				color: darken(@grey, 15%);
+				.proxima-reg;
+			 }
+			margin-bottom: 5%;
+		}	
+		&-cart {
+			.round-arrow-btn;						
+			background: @white;
+			color: @orange;	
+			box-shadow: 0px 2px 2px 0px @grey;			
+		}
+		&-1 {
+			flex-basis: 33%;					       
+			background-image: url("../img/product-0.png"); 						
+		}
+		&-2 {
+			flex-basis: 33%;					       
+			background-image: url("../img/product-1.png"); 						
+		}
+		&-3 {
+			flex-basis: 33%;					       
+			background-image: url("../img/product-2.png"); 						
+		}
+		&-4 {
+			flex-basis: 33%;					       
+			background-image: url("../img/product-3.png"); 						
+		}
+		&-5 {
+			flex-basis: 33%;					       
+			background-image: url("../img/product-4.png");
+			background-color: @beige;
+			background-position: 100% 50%; 	
+			.product-cart {
+				background: @dark-beige; 
+			}					
+		}
+		&-6 {
+			flex-basis: 33%;					       
+			background-image: url("../img/product-5.png"); 						
+		}
+		&-7 {
+			flex-basis: 33%;					       
+			background-image: url("../img/product-6.png"); 						
+		}
+		&-8 {
+			flex-basis: 33%;					       
+			background-image: url("../img/product-7.png"); 						
+		}
+		&-9 {
+			flex-basis: 33%;					       
+			background-image: url("../img/product-8.png"); 						
+		}
+		&-10 {
+			flex-basis: 33%;					       
+			background-image: url("../img/product-9.png"); 						
+		}
+		.about {
+			h2, p {
+				max-width: 336px;
+			}						
+			min-width: 850px;
+			height: 300px;
+			flex-basis: 66%;			
+			background-repeat: no-repeat;
+			background-image: url("../img/about.png");					
+			border-top: 0.5px solid @light-grey;
+			border-left: 0.5px solid @light-grey;
+			background-size: cover; 
+			background-position: top left;
+		}
+	}
+}
+}
+
+footer {
+	height: 300px;
+	background-color: @light-black;
+	color: @white;
+	width: 100%;
+	max-width: 1280px;
+	min-width: 430px;	
+	box-sizing: border-box;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 2%;
+	h3 {
+		.proxima-bld;
+		font-size: 18px;
+		line-height: 24px;
+		color: @white;
+	}
+
+	p {
+		.proxima-reg;
+		line-height: 18px;
+		font-size: 12px;
+		color: @grey;
+	}
 }
