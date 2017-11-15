@@ -28,7 +28,7 @@
 @white: #fff;
 @beige: #f4f0eb;
 @dark-beige: #b99978;
-@background: #ffffff;
+@back-color: #ffffff;
 /* Main Header */
 header {
 	width: 100%;
@@ -44,7 +44,10 @@ header {
 	box-sizing: border-box;    
 	text-transform: uppercase;
 	a {
-		text-decoration: none;    
+		text-decoration: none; 
+		&:hover {
+			text-decoration: underline;
+		}   
 	}
 	hr {
 		border: none;
@@ -136,10 +139,9 @@ main {
 	}	
 /* Main Slider */
 .main-slider {
-    height: 520px;
-    background-image: url("../img/slider-0.png");
-	background-size: cover;	
-    background-repeat: no-repeat;
+    height: 520px;			
+	background: url("../img/slider-0.png") no-repeat;
+	background-size: cover; 
     display: flex;
     justify-content: space-between; 
 	align-items: center; 
@@ -182,7 +184,7 @@ main {
 			height: 5px;
 			margin: 100% 0%;     
 			border: 2px solid @white;
-			&:last-child { background: @white; }
+			&:hover { background: @white; }
 		}
 		&-arrow {
 			.round-arrow-btn;
@@ -214,8 +216,7 @@ main {
 		margin: 7%;    
 		.main-slider-text;		
 	} 
-	&-item {			
-		min-width: 425px;
+	&-item {		
 		min-height: 195px;
 		background-repeat: no-repeat;
 		background-size: cover;	
@@ -265,8 +266,8 @@ main {
     flex-direction: row;
 	align-items: stretch;  
 	flex-wrap: wrap;
-	border-right: 0.5px solid @light-grey;
-	background-color: @background;
+	border-right: 1px solid @light-grey;
+	background-color: @back-color;
 	h2 {
 		margin: 5% 0 0 5%;
 		.proxima-bld;
@@ -284,16 +285,23 @@ main {
 		line-height: 16px;
 		color: darken(@grey, 15%);		
 	} 
-	.product {			
-		min-width: 425px;
+	.product {
 		height: 300px;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		background-repeat: no-repeat;
-		background-position: 75% 50%;		
-		border-top: 0.5px solid @light-grey;
-		border-left: 0.5px solid @light-grey;			
+		justify-content: space-between;				
+		background: 75% 50% no-repeat;
+		border-top: 1px solid @light-grey;
+		border-left: 1px solid @light-grey;
+		&:hover{
+			background-color: @beige;
+			.product-cart{
+				background: @dark-beige;
+				.cart {
+					background-image: url("../img/shopping-bag-white.png");
+				}
+			}
+		}
 		&-price {			
 			display: flex;
 			justify-content: space-between;
@@ -303,72 +311,70 @@ main {
 				.proxima-reg;
 			 }
 			margin-bottom: 5%;
-		}	
+		}			
 		&-cart {
 			.round-arrow-btn;						
-			background: @white;
+			background: @white;			
 			color: @orange;	
-			box-shadow: 0px 2px 2px 0px @grey;			
-		}
+			box-shadow: 0px 2px 2px 0px @grey;
+	
+			.cart {
+				display: block;
+				height: 40px;				
+				background: no-repeat center center url("../img/shopping-bag-orange.png");
+			}			
+		}		
 		&-1 {
-			flex-basis: 33%;					       
+			flex-basis: 33.25%;					       
 			background-image: url("../img/product-0.png"); 						
 		}
 		&-2 {
-			flex-basis: 33%;					       
+			flex-basis: 33.25%;					       
 			background-image: url("../img/product-1.png"); 						
 		}
 		&-3 {
-			flex-basis: 33%;					       
+			flex-basis: 33.26%;					       
 			background-image: url("../img/product-2.png"); 						
 		}
 		&-4 {
-			flex-basis: 33%;					       
+			flex-basis: 33.25%;					       
 			background-image: url("../img/product-3.png"); 						
 		}
 		&-5 {
-			flex-basis: 33%;					       
-			background-image: url("../img/product-4.png");
-			background-color: @beige;
-			background-position: 100% 50%; 	
-			.product-cart {
-				background: @dark-beige; 
-			}					
+			flex-basis: 33.25%;
+			background: url("../img/product-4.png")	100% 50% no-repeat;						
 		}
 		&-6 {
-			flex-basis: 33%;					       
+			flex-basis: 33.26%;					       
 			background-image: url("../img/product-5.png"); 						
 		}
 		&-7 {
-			flex-basis: 33%;					       
+			flex-basis: 33.25%;					       
 			background-image: url("../img/product-6.png"); 						
 		}
 		&-8 {
-			flex-basis: 33%;					       
+			flex-basis: 33.25%;					       
 			background-image: url("../img/product-7.png"); 						
 		}
 		&-9 {
-			flex-basis: 33%;					       
+			flex-basis: 33.26%;					       
 			background-image: url("../img/product-8.png"); 						
 		}
 		&-10 {
-			flex-basis: 33%;					       
+			flex-basis: 33.25%;					       
 			background-image: url("../img/product-9.png"); 						
+		}		
+	}
+	.about {
+		h2, p {
+			max-width: 336px;
 		}
-		.about {
-			h2, p {
-				max-width: 336px;
-			}						
-			min-width: 850px;
-			height: 300px;
-			flex-basis: 66%;			
-			background-repeat: no-repeat;
-			background-image: url("../img/about.png");					
-			border-top: 0.5px solid @light-grey;
-			border-left: 0.5px solid @light-grey;
-			background-size: cover; 
-			background-position: top left;
-		}
+		height: 300px;
+		flex-basis: 66.59%;
+		border-top: 1px solid @light-grey;
+		border-left: 1px solid @light-grey;
+		background: url("../img/about.png") top left no-repeat;
+		background-size: cover; 		
 	}
 }
 }

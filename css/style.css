@@ -38,6 +38,9 @@ header {
 header a {
   text-decoration: none;
 }
+header a:hover {
+  text-decoration: underline;
+}
 header hr {
   border: none;
   background-color: #eeeeee;
@@ -133,9 +136,8 @@ main .round-arrow-btn {
 }
 main .main-slider {
   height: 520px;
-  background-image: url("../img/slider-0.png");
+  background: url("../img/slider-0.png") no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -186,7 +188,7 @@ main .main-slider-nav .circle {
   margin: 100% 0%;
   border: 2px solid #ffffff;
 }
-main .main-slider-nav .circle:last-child {
+main .main-slider-nav .circle:hover {
   background: #ffffff;
 }
 main .main-slider-nav-arrow {
@@ -226,7 +228,6 @@ main .main-banner p {
   line-height: 24px;
 }
 main .main-banner-item {
-  min-width: 425px;
   min-height: 195px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -286,7 +287,7 @@ main .products {
   flex-direction: row;
   align-items: stretch;
   flex-wrap: wrap;
-  border-right: 0.5px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
   background-color: #ffffff;
 }
 main .products h2 {
@@ -309,15 +310,22 @@ main .products p {
   color: #838383;
 }
 main .products .product {
-  min-width: 425px;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-repeat: no-repeat;
-  background-position: 75% 50%;
-  border-top: 0.5px solid #eeeeee;
-  border-left: 0.5px solid #eeeeee;
+  background: 75% 50% no-repeat;
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+main .products .product:hover {
+  background-color: #f4f0eb;
+}
+main .products .product:hover .product-cart {
+  background: #b99978;
+}
+main .products .product:hover .product-cart .cart {
+  background-image: url("../img/shopping-bag-white.png");
 }
 main .products .product-price {
   display: flex;
@@ -340,64 +348,61 @@ main .products .product-cart {
   color: #c59a77;
   box-shadow: 0px 2px 2px 0px #a9a9a9;
 }
+main .products .product-cart .cart {
+  display: block;
+  height: 40px;
+  background: no-repeat center center url("../img/shopping-bag-orange.png");
+}
 main .products .product-1 {
-  flex-basis: 33%;
+  flex-basis: 33.25%;
   background-image: url("../img/product-0.png");
 }
 main .products .product-2 {
-  flex-basis: 33%;
+  flex-basis: 33.25%;
   background-image: url("../img/product-1.png");
 }
 main .products .product-3 {
-  flex-basis: 33%;
+  flex-basis: 33.26%;
   background-image: url("../img/product-2.png");
 }
 main .products .product-4 {
-  flex-basis: 33%;
+  flex-basis: 33.25%;
   background-image: url("../img/product-3.png");
 }
 main .products .product-5 {
-  flex-basis: 33%;
-  background-image: url("../img/product-4.png");
-  background-color: #f4f0eb;
-  background-position: 100% 50%;
-}
-main .products .product-5 .product-cart {
-  background: #b99978;
+  flex-basis: 33.25%;
+  background: url("../img/product-4.png") 100% 50% no-repeat;
 }
 main .products .product-6 {
-  flex-basis: 33%;
+  flex-basis: 33.26%;
   background-image: url("../img/product-5.png");
 }
 main .products .product-7 {
-  flex-basis: 33%;
+  flex-basis: 33.25%;
   background-image: url("../img/product-6.png");
 }
 main .products .product-8 {
-  flex-basis: 33%;
+  flex-basis: 33.25%;
   background-image: url("../img/product-7.png");
 }
 main .products .product-9 {
-  flex-basis: 33%;
+  flex-basis: 33.26%;
   background-image: url("../img/product-8.png");
 }
 main .products .product-10 {
-  flex-basis: 33%;
+  flex-basis: 33.25%;
   background-image: url("../img/product-9.png");
 }
-main .products .product .about {
-  min-width: 850px;
+main .products .about {
   height: 300px;
-  flex-basis: 66%;
-  background-repeat: no-repeat;
-  background-image: url("../img/about.png");
-  border-top: 0.5px solid #eeeeee;
-  border-left: 0.5px solid #eeeeee;
+  flex-basis: 66.59%;
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  background: url("../img/about.png") top left no-repeat;
   background-size: cover;
-  background-position: top left;
 }
-main .products .product .about h2,
-main .products .product .about p {
+main .products .about h2,
+main .products .about p {
   max-width: 336px;
 }
 footer {
