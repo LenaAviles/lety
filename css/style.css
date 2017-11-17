@@ -127,12 +127,57 @@ main {
   /* Main Banner */
   /* Section Products */
 }
-main .round-arrow-btn {
+main .round-btn {
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
+}
+main .round-btn-transparent {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #1a1a1a;
+  border: 0.7px dotted #c59a77;
+}
+main .round-btn-transparent a {
+  color: #000000;
+}
+main .round-btn-black {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #000000;
+}
+main .round-btn-black a {
+  color: #eeeeee;
+}
+main .round-btn-white {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+}
+main .round-btn-white a {
+  color: #c59a77;
+}
+main .round-btn-orange {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #b99978;
+}
+main .round-btn-orange a {
+  color: #ffffff;
 }
 main .main-slider {
   height: 520px;
@@ -176,7 +221,10 @@ main .main-slider-nav {
   justify-content: space-around;
   align-items: center;
   margin: 3%;
+}
+main .main-slider-nav a {
   color: #c59a77;
+  text-decoration: none;
 }
 main .main-slider-nav .circles-parent {
   margin: 50%;
@@ -197,8 +245,22 @@ main .main-slider-nav-arrow {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  margin: 50%;
   background: #ffffff;
+  margin: 50%;
+}
+main .main-slider-nav-arrow a {
+  color: #c59a77;
+}
+main .main-slider-nav-arrow:hover {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #b99978;
+}
+main .main-slider-nav-arrow:hover a {
+  color: #ffffff;
 }
 main .main-slider-nav-about {
   margin: 50%;
@@ -212,6 +274,12 @@ main .main-slider-nav-about {
   width: 110px;
   height: 110px;
   background: #ffffff;
+}
+main .main-slider-nav-about:hover {
+  background: #b99978;
+}
+main .main-slider-nav-about:hover a {
+  color: #ffffff;
 }
 main .main-banner {
   max-width: 100%;
@@ -235,7 +303,7 @@ main .main-banner-item {
 main .main-banner-first {
   flex-basis: 33.33%;
   background-image: url("../img/banner-0.png");
-  color: #c59a77;
+  color: #b99978;
 }
 main .main-banner-first-arrow {
   text-align: center;
@@ -243,10 +311,26 @@ main .main-banner-first-arrow {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  margin: 15% 7% 7% 7%;
   background: #1a1a1a;
-  color: #000000;
   border: 0.7px dotted #c59a77;
+  margin: 15% 7% 7% 7%;
+}
+main .main-banner-first-arrow a {
+  color: #000000;
+}
+main .main-banner-first:hover .main-banner-first-arrow {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #b99978;
+}
+main .main-banner-first:hover .main-banner-first-arrow a {
+  color: #ffffff;
+}
+main .main-banner-first:hover .main-banner-first-arrow a {
+  color: #000000;
 }
 main .main-banner-second {
   flex-basis: 33.33%;
@@ -258,9 +342,25 @@ main .main-banner-second-arrow {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  margin: 15% 7% 7% 7%;
   background: #000000;
+  margin: 15% 7% 7% 7%;
+}
+main .main-banner-second-arrow a {
   color: #eeeeee;
+}
+main .main-banner-second:hover .main-banner-second-arrow {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+}
+main .main-banner-second:hover .main-banner-second-arrow a {
+  color: #c59a77;
+}
+main .main-banner-second:hover .main-banner-second-arrow a {
+  color: #000000;
 }
 main .main-banner-third {
   flex-basis: 33.33%;
@@ -273,13 +373,37 @@ main .main-banner-third-arrow {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  margin: 15% 7% 7% 7%;
   background: #ffffff;
+  margin: 15% 7% 7% 7%;
+}
+main .main-banner-third-arrow a {
   color: #c59a77;
+}
+main .main-banner-third-arrow:hover {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #000000;
+}
+main .main-banner-third-arrow:hover a {
+  color: #eeeeee;
 }
 main .main-banner-third-img {
   margin-top: -180px;
   float: right;
+}
+main .main-banner-third:hover .main-banner-third-arrow {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #000000;
+}
+main .main-banner-third:hover .main-banner-third-arrow a {
+  color: #eeeeee;
 }
 main .products {
   max-width: 100%;
@@ -345,8 +469,10 @@ main .products .product-cart {
   width: 40px;
   height: 40px;
   background: #ffffff;
-  color: #c59a77;
   box-shadow: 0px 2px 2px 0px #a9a9a9;
+}
+main .products .product-cart a {
+  color: #c59a77;
 }
 main .products .product-cart .cart {
   display: block;

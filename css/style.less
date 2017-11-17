@@ -130,13 +130,35 @@ main {
 	flex-grow: 1;
 	box-sizing: border-box;
 	margin: auto;
-	.round-arrow-btn {		
+	.round-btn {		
 		text-align: center;
 		line-height: 40px;
 		border-radius: 50%;
 		width: 40px;
-		height: 40px;		
+		height: 40px;
 	}	
+	.round-btn-transparent {
+		.round-btn;						
+		background: @light-black;
+		a { color: @black; }						
+		border: 0.7px dotted @orange;
+	}
+	.round-btn-black {
+		.round-btn;						
+		background: @black;
+		a { color: @light-grey;}
+	}
+	.round-btn-white {
+		.round-btn;						
+		background: @white;
+		a { color: @orange; }
+	}
+	.round-btn-orange {	
+		.round-btn;					
+		background: @dark-beige;
+		a { color: @white; }
+	}		
+
 /* Main Slider */
 .main-slider {
     height: 520px;			
@@ -176,7 +198,10 @@ main {
 		justify-content: space-around;
 		align-items: center;    
 		margin: 3%;
-		color: @orange;
+		a { 
+			color: @orange;
+			text-decoration: none;
+		}		
 		.circles-parent { margin: 50%;}
 		.circle {      
 			border-radius: 50%;
@@ -187,9 +212,11 @@ main {
 			&:hover { background: @white; }
 		}
 		&-arrow {
-			.round-arrow-btn;
+			.round-btn-white;
 			margin: 50%;			
-			background: @white;
+			&:hover {
+				.round-btn-orange;				
+			}
 		}
 		&-about {
 			margin: 50%;
@@ -202,6 +229,10 @@ main {
 			width: 110px;
 			height: 110px;
 			background: @white;
+			&:hover {
+				background: @dark-beige;
+				a { color: @white; }
+			}
 		}
 	}
 }
@@ -224,23 +255,30 @@ main {
 	&-first {
 		flex-basis: 33.33%;		       
 		background-image: url("../img/banner-0.png"); 			
-		color: @orange;
+		color: @dark-beige;
 		&-arrow {
-			.round-arrow-btn;
+			.round-btn-transparent;
 			margin: 15% 7% 7% 7%;			
-			background: @light-black;
-			color: @black;			
-			border: 0.7px dotted @orange;
+		}
+		&:hover {
+			.main-banner-first-arrow { 
+				.round-btn-orange;
+				a { color: @black;}
+			}
 		}
 	}
 	&-second { 
 		flex-basis: 33.33%;		
 		background-image: url("../img/banner-1.png");
 		&-arrow {
-			.round-arrow-btn;
-			margin: 15% 7% 7% 7%;			
-			background: @black;
-			color: @light-grey;
+			.round-btn-black;
+			margin: 15% 7% 7% 7%;
+		}
+		&:hover {
+			.main-banner-second-arrow { 
+				.round-btn-white;
+				a { color: @black;}
+			}
 		}			
 	} 
 	&-third {
@@ -248,14 +286,16 @@ main {
 		background-image: url("../img/banner-2.png");				
 		color: @white; 
 		&-arrow {
-			.round-arrow-btn;
+			.round-btn-white;
 			margin: 15% 7% 7% 7%;			
-			background: @white;
-			color: @orange;
+			&:hover { .round-btn-black; }
 		}
 		&-img {
 			margin-top: -180px;    
 			float: right;
+		}
+		&:hover {
+			.main-banner-third-arrow { .round-btn-black; }
 		}   
 	} 
 }
@@ -313,9 +353,7 @@ main {
 			margin-bottom: 5%;
 		}			
 		&-cart {
-			.round-arrow-btn;						
-			background: @white;			
-			color: @orange;	
+			.round-btn-white;	
 			box-shadow: 0px 2px 2px 0px @grey;
 	
 			.cart {
